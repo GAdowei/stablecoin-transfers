@@ -15,7 +15,10 @@ let daiContract = new Contract(DAI_ADDRESS, CONTRACT_ABI, provider);
 
 const contracts = new Array(usdcContract, usdtContract, daiContract);
 
-const TRANSFER_THRESHOLD = 10000;
+// const TRANSFER_THRESHOLD = 10000;
+const TRANSFER_THRESHOLD = async () => await input.text('Enter your transfer threshold:');
+
+
 
 async function main() {
 
